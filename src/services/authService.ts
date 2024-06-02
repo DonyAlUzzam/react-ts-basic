@@ -5,6 +5,12 @@ interface LoginData {
   password: string;
 }
 
+interface RegisterData {
+    name: string;
+    email: string;
+    password: string;
+  }
+
  export const login = async (data: LoginData) => {
   const response = await api.post('/login', data);
   if (response.data.data.token) {
@@ -14,11 +20,11 @@ interface LoginData {
   return response.data;
 };
 
- const register = async (data: LoginData) => {
+export const register = async (data: RegisterData) => {
     const response = await api.post('/register', data);
-    if (response.data.token) {
-      localStorage.setItem('token', response.data.token);
-      localStorage.setItem('role', response.data.user.role); 
+    if (response.data.data.token) {
+      localStorage.setItem('token', response.data.data.token);
+      localStorage.setItem('role', response.data.data.user.role); 
     }
     return response.data;
   };

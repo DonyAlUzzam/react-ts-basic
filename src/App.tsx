@@ -5,6 +5,7 @@ import BooksPage from './pages/BookPage';
 import CategoriesPage from './pages/CategoryPage';
 // import AuthorsPage from './pages/AuthorsPage';
 import LoginPage from './pages/Auth/Login';
+import RegisterPage from './pages/Auth/Register';
 // import RegisterPage from './pages/RegisterPage';
 import PrivateRoute from './components/PrivateRoute';
 import './App.css';
@@ -37,6 +38,7 @@ const Main: React.FC = () => {
           <PrivateRoute path="/categories" component={CategoriesPage} />
           {/* <PrivateRoute path="/authors" component={AuthorsPage} /> */}
           <Route path="/login" component={LoginPage} />
+          <Route path="/register" component={RegisterPage} />
           {/* <Route path="/register" component={RegisterPage} /> */}
           <PrivateRoute path="/" component={BooksPage} />
         </Switch>

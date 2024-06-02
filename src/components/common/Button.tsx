@@ -26,7 +26,7 @@ export const ButtonNode: React.FC<ButtonProps> = ({ type, onClick, children, var
 
 export const IconButton: React.FC<IconButtonProps> = ({ icon: Icon, variant = 'primary', onClick, children }) => {
   return (
-    <Button variant={variant} onClick={onClick} className="align-items-center m-2">
+    <Button variant={variant} onClick={onClick} className="align-items-center m-2 ms-auto">
       <Icon className="me-2" />
       {children}
     </Button>

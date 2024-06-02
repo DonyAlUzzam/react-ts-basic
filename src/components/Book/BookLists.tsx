@@ -29,18 +29,4 @@ const BookList: React.FC<BookListProps> = ({ books, onUpdate, onDelete }) => {
   );
 };
 
-
-const flattenObject = (obj: any, prefix = ''): any => {
-    return Object.keys(obj).reduce((acc: any, key: string) => {
-      const pre = prefix.length ? prefix + '.' : '';
-      if (obj[key] && typeof obj[key] === 'object' && !Array.isArray(obj[key])) {
-        Object.assign(acc, flattenObject(obj[key], pre + key));
-      } else {
-        acc[pre + key] = obj[key];
-      }
-      return acc;
-    }, {});
-  };
-
-
 export default BookList;

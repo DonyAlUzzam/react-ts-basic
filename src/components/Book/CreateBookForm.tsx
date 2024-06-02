@@ -111,8 +111,6 @@ const CreateBookForm: React.FC<CreateBookFormProps> = ({ book,category, onSubmit
                             label="Category"
                         />
                         
-                        
-                    
             <div className="modal-footer">
                 <ButtonNode type="submit" variant="primary">{book ? 'Update Book' : 'Create Book'}</ButtonNode>
                 <ButtonNode type="button" variant="danger" onClick={closeModal}>Cancel</ButtonNode>
