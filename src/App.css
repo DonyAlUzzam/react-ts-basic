@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+body, html, #root {
+  height: 100%;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100%;
+}
+
+#sidebar-wrapper {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #343a40;
+  padding-top: 20px;
+  transition: all 0.3s;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+#sidebar-wrapper .list-group {
+  width: 100%;
+}
+
+#sidebar-wrapper .list-group-item {
+  border: none;
+  padding: 1.2rem 1.5rem;
+  font-size: 1rem;
+  color: #cfd8dc;
+  background-color: #343a40;
+}
+
+#sidebar-wrapper .list-group-item:hover {
+  background-color: #495057;
+  color: #fff;
+}
+
+#page-content-wrapper {
+  flex-grow: 1;
+  margin-left: 250px;
+  padding: 20px;
+  transition: all 0.3s;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+/* Add this to your CSS file */
+.modal {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.App-link {
-  color: #61dafb;
+.modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 0.8em;
+}
+
